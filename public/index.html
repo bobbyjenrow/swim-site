@@ -10,7 +10,27 @@
 <body>
   <h1>Welcome to the app!</h1>
 
-  <app>... loading</app>
+  <app>... this is the live section of the app ... not yet working</app>
+
+  <h2>API endpoints</h2>
+
+  <label><h3><a href="https://swim-site.herokuapp.com/users">/users endpoints</a></h3></label>
+  <ul>
+    <li><strong>GET /users</strong>: Get json of all users</li>
+    <li><strong>POST /users</strong>: Submit a  raw JSON body containing a valid body (username, password, email, role fields  must be filled out) <br/>
+      <p>
+        IE: {
+    "username" : "eddier", <strong> >> lowercase, numbers accepted, minlength 5 max 16</strong> <br/>
+    "password" : "EddieReeseIsDaBest", <strong> > >> lower + upper case, numbers, min 6, max  16</strong>  <br/>
+    "email"    : "eddiereese@gmail.com", <strong> >> lowercase, numbers accepted, email format </strong> <br/>
+    "role"     : "coach"  <strong> >> lowercase = "coach" or "athlete" </strong><br/>
+      </p>
+    </li>
+    <li><strong> JSON PATCH /users/:id </strong>: URL must be /users/+ the full user id. Submit a  raw JSON body containing operation type, path, and the value. Works for add and replace.<br/>
+      <p>
+         IE: {"op": "replace", "path": "/bio/name" , "value": "examplevalue"}
+      </p>
+  </ul>
 
 </body>
 </html>
