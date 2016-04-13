@@ -48,7 +48,7 @@ var userSchema = new Schema({
   lastActive: {type: Date, default: (new Date())},                        // Updated on login & activity
   threads: {type: [String], default: []},                    // Updated on new thread creation
   bio: {                                 // Initially blank, updated under profile
-    name: {type: String, default: "", required: true},
+    name: {type: String, default: "", required: false},
     born: {type: Date, default: (new Date())},
     location: {type: String, default: ""},
     picture: {type: String, default: ""}, // Urls
