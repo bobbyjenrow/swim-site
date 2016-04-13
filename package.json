@@ -28,7 +28,8 @@
   },
   "devDependencies": {
     "jspm": "^0.16.33",
-    "mpath": "^0.2.1"
+    "mpath": "^0.2.1",
+    "nodemon": "^1.9.1"
   },
   "jspm": {
     "directories": {
