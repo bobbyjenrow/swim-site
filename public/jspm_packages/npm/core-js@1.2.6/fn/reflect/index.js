@@ -1,4 +1,3 @@
-/* */ 
 require('../../modules/es6.reflect.apply');
 require('../../modules/es6.reflect.construct');
 require('../../modules/es6.reflect.define-property');

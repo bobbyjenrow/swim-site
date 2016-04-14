@@ -1,0 +1,25 @@
+{
+  "main": "dist/zone-node.js",
+  "format": "cjs",
+  "meta": {
+    "*": {
+      "globals": {
+        "process": "process"
+      }
+    },
+    "*.json": {
+      "format": "json"
+    },
+    "lib/browser/define-property.ts": {
+      "format": "esm"
+    },
+    "lib/browser/event-target.ts": {
+      "format": "esm"
+    }
+  },
+  "map": {
+    "./dist/zone-node.js": {
+      "browser": "./dist/zone.js"
+    }
+  }
+}

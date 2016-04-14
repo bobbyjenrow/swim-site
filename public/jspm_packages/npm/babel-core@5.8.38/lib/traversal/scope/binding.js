@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * This class is responsible for a binding inside of a scope.
  *

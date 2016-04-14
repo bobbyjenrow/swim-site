@@ -1,4 +1,3 @@
-/* */ 
 require('../modules/core.object.is-object');
 require('../modules/core.object.classof');
 require('../modules/core.object.define');

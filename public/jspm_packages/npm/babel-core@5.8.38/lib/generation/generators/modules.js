@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 "use strict";
 
 exports.__esModule = true;

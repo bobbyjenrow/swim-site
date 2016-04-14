@@ -1,4 +1,3 @@
-/* */ 
 var global    = require('./$.global')
   , core      = require('./$.core')
   , ctx       = require('./$.ctx')

@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 import Enumerator from '../enumerator';
 
 /**

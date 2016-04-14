@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Prints ComprehensionBlock, prints left and right.
  */

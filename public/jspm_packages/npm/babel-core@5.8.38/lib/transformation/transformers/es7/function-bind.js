@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 // https://github.com/zenparsing/es-function-bind
 
 "use strict";

@@ -2,44 +2,58 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-  <script src="jspm_packages/system.js"></script>
-  <script src="config.js"></script>
+  <script src="/jspm_packages/system.js"></script>
+  <script src="/jspm.browser.js"></script>
+  <script src="/jspm.config.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 <script>
-  System.import('app').then(null, console.error.bind(console));
+  System.import('app.ts').then(null, console.error.bind(console));
 </script>
 </head>
 <body>
-  <h1>Welcome to the app!</h1>
+<div class="container">
+  <div id="header-wrapper">
+    <header>
+      <h1>Welcome to the app!</h1>
+    </header>
+  </div>
+<div id="main-wrapper">
+        <h2>API endpoints</h2>
 
-  <app>... this is the live section of the app ... not yet working</app>
+        <label><h3><a href="https://swim-site.herokuapp.com/users">/users endpoints</a></h3></label>
+        <ul>
+          <li><strong>GET /users</strong>: Get json of all users</li>
+          <li><strong>POST /users</strong>: Submit a  raw JSON body containing a valid body (username, password, email, role fields  must be filled out) <br/>
+            <p>
+              IE: {<br/>
+          "username" : "eddier", <strong> >> lowercase, numbers accepted, minlength 5 max 16</strong> <br/>
+          "password" : "EddieReeseIsDaBest", <strong> > >> lower + upper case, numbers, min 6, max  16</strong>  <br/>
+          "email"    : "eddiereese@gmail.com", <strong> >> lowercase, numbers accepted, email format </strong> <br/>
+          "role"     : "coach"  <strong> >> lowercase = "coach" or "athlete" </strong><br/>
+        }<br/>
+            </p>
+          </li>
+          <li><strong> JSON PATCH /users/:id </strong>: URL must be /users/+ the full user id. Submit a  raw JSON body containing an  array with objects containing operation type, path, and the value. Works for add and replace.<br/>
+            <p>
+               IE: [
+             </br/>
+               {"op": "replace", "path": "/bio/name" , "value": "examplevalue"},<br />
+               {"op": "add", "path": "/bio/interests" , "value": ["coaching"]},<br />
+               {"op": "replace", "path": "/bio/location" , "value": "Pittsburgh, PA"} <br />
+               ]<br />
+            </p>
+          <li><strong> GET /users/:id </strong>: URL must be /users/+ the full user id. Returns a single user.<br/>
+        </ul>
 
-  <h2>API endpoints</h2>
+        <h2>Angular Component</h2>
+        <app>... this is the live section of the app ... not yet working</app>
 
-  <label><h3><a href="https://swim-site.herokuapp.com/users">/users endpoints</a></h3></label>
-  <ul>
-    <li><strong>GET /users</strong>: Get json of all users</li>
-    <li><strong>POST /users</strong>: Submit a  raw JSON body containing a valid body (username, password, email, role fields  must be filled out) <br/>
-      <p>
-        IE: {<br/>
-    "username" : "eddier", <strong> >> lowercase, numbers accepted, minlength 5 max 16</strong> <br/>
-    "password" : "EddieReeseIsDaBest", <strong> > >> lower + upper case, numbers, min 6, max  16</strong>  <br/>
-    "email"    : "eddiereese@gmail.com", <strong> >> lowercase, numbers accepted, email format </strong> <br/>
-    "role"     : "coach"  <strong> >> lowercase = "coach" or "athlete" </strong><br/>
-  }<br/>
-      </p>
-    </li>
-    <li><strong> JSON PATCH /users/:id </strong>: URL must be /users/+ the full user id. Submit a  raw JSON body containing an  array with objects containing operation type, path, and the value. Works for add and replace.<br/>
-      <p>
-         IE: [
-       </br/>
-         {"op": "replace", "path": "/bio/name" , "value": "examplevalue"},<br />
-         {"op": "add", "path": "/bio/interests" , "value": ["coaching"]},<br />
-         {"op": "replace", "path": "/bio/location" , "value": "Pittsburgh, PA"} <br />
-         ]<br />
-      </p>
-    <li><strong> GET /users/:id </strong>: URL must be /users/+ the full user id. Returns a single user.<br/>
-
-  </ul>
-
+</div>
+  <div id="footer-wrapper">
+    <footer>
+        Text
+    </footer>
+  </div>
+</div>
 </body>
 </html>

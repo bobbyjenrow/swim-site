@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 "use strict";
 
 require("./index");

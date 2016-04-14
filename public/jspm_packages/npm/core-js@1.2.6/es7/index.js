@@ -1,4 +1,3 @@
-/* */ 
 require('../modules/es7.array.includes');
 require('../modules/es7.string.at');
 require('../modules/es7.string.pad-left');

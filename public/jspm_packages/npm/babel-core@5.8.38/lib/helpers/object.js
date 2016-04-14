@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Create an object with a `null` prototype.
  */

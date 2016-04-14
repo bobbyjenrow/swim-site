@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 // https://github.com/leebyron/ecmascript-more-export-from
 
 "use strict";

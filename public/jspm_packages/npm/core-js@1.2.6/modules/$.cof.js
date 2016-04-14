@@ -1,4 +1,3 @@
-/* */ 
 var toString = {}.toString;
 
 module.exports = function(it){

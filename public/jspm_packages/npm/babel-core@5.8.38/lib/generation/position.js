@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Track current position in code generation.
  */

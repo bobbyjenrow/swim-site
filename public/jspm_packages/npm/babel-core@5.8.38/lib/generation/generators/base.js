@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Print File.program
  */

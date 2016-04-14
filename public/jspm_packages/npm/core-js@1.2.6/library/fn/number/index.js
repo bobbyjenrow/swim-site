@@ -1,4 +1,3 @@
-/* */ 
 require('../../modules/es6.number.constructor');
 require('../../modules/es6.number.epsilon');
 require('../../modules/es6.number.is-finite');

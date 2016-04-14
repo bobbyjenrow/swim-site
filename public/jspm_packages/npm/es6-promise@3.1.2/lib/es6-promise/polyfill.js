@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /*global self*/
 import Promise from './promise';
 

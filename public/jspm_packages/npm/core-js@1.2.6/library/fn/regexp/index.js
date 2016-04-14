@@ -1,4 +1,3 @@
-/* */ 
 require('../../modules/es6.regexp.constructor');
 require('../../modules/es6.regexp.flags');
 require('../../modules/es6.regexp.match');

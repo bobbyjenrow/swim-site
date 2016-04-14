@@ -1,4 +1,3 @@
-/* */ 
 require('../../modules/es6.symbol');
 require('../../modules/es6.object.assign');
 require('../../modules/es6.object.is');

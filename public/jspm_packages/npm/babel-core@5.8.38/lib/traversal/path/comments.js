@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Share comments amongst siblings.
  */

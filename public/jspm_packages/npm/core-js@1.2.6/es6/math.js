@@ -1,4 +1,3 @@
-/* */ 
 require('../modules/es6.math.acosh');
 require('../modules/es6.math.asinh');
 require('../modules/es6.math.atanh');

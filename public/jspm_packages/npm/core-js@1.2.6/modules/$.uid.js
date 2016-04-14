@@ -1,4 +1,3 @@
-/* */ 
 var id = 0
   , px = Math.random();
 module.exports = function(key){

@@ -1,0 +1,12 @@
+{
+  "main": "browser.js",
+  "map": {
+    "regenerator/runtime": "babel-runtime/regenerator/runtime"
+  },
+  "meta": {
+    "browser.js": {
+      "exports": "babel",
+      "format": "global"
+    }
+  }
+}

@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 // https://github.com/rwaldron/exponentiation-operator
 
 "use strict";

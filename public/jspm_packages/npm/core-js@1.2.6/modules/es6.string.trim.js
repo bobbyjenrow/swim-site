@@ -1,7 +1,7 @@
-/* */ 
 'use strict';
-require('./$.string-trim')('trim', function($trim) {
-  return function trim() {
+// 21.1.3.25 String.prototype.trim()
+require('./$.string-trim')('trim', function($trim){
+  return function trim(){
     return $trim(this, 3);
   };
 });

@@ -7,12 +7,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var filter = require('content-filter');
+var ejs = require('ejs');
 
 var app = express();
 mongoose.connect("mongodb://admin:BigoleBigole@ds019970.mlab.com:19970/swim-guru");
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 
 

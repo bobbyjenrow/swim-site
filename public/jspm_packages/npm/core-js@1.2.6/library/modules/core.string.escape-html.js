@@ -1,4 +1,3 @@
-/* */ 
 'use strict';
 var $export = require('./$.export');
 var $re = require('./$.replacer')(/[&<>"']/g, {
@@ -8,6 +7,5 @@ var $re = require('./$.replacer')(/[&<>"']/g, {
   '"': '&quot;',
   "'": '&apos;'
 });
-$export($export.P + $export.F, 'String', {escapeHTML: function escapeHTML() {
-    return $re(this);
-  }});
+
+$export($export.P + $export.F, 'String', {escapeHTML: function escapeHTML(){ return $re(this); }});

@@ -1,4 +1,3 @@
-/* */ 
 function runTests(fixture) {
     var results = { passed: [], failed: [] };
     for (var testName in fixture) {

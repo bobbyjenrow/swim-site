@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 //import lineNumbers from "line-numbers";
 "use strict";
 

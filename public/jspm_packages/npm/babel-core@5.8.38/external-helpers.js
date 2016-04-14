@@ -1,5 +1,3 @@
-/* */ 
-"format global";
 (function (global) {
   var babelHelpers = global.babelHelpers = {};
 

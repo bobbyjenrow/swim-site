@@ -1,4 +1,3 @@
-/* */ 
 var $Object = Object;
 module.exports = {
   create:     $Object.create,

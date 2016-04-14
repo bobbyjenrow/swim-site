@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * [Please add a description.]
  */

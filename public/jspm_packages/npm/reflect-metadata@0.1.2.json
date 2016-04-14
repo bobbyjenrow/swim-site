@@ -1,0 +1,12 @@
+{
+  "main": "Reflect.js",
+  "map": {
+    "crypto": "@empty"
+  },
+  "format": "cjs",
+  "meta": {
+    "*.json": {
+      "format": "json"
+    }
+  }
+}

@@ -1,4 +1,3 @@
-/* */ 
 module.exports = function(regExp, replace){
   var replacer = replace === Object(replace) ? function(part){
     return replace[part];

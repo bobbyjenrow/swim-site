@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Print ClassDeclaration, prints decorators, typeParameters, extends, implements, and body.
  */

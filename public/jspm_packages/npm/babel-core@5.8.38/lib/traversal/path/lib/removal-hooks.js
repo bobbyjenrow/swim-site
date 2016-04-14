@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 // this file contains hooks that handle ancestry cleanup of parent nodes when removing children
 
 "use strict";

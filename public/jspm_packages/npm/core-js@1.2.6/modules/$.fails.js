@@ -1,4 +1,3 @@
-/* */ 
 module.exports = function(exec){
   try {
     return !!exec();

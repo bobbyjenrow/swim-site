@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 var len = 0;
 var vertxNext;
 var customSchedulerFn;

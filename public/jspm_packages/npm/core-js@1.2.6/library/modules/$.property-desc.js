@@ -1,4 +1,3 @@
-/* */ 
 module.exports = function(bitmap, value){
   return {
     enumerable  : !(bitmap & 1),

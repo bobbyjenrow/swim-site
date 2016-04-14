@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /* eslint eqeqeq: 0 */
 
 "use strict";

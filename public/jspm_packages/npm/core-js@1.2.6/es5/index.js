@@ -1,4 +1,3 @@
-/* */ 
 require('../modules/es5');
 require('../modules/es6.object.freeze');
 require('../modules/es6.object.seal');

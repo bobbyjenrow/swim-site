@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 import Promise from './es6-promise/promise';
 import polyfill from './es6-promise/polyfill';
 

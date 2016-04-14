@@ -1,4 +1,3 @@
-/* */ 
 'use strict';
 var core        = require('./$.core')
   , $           = require('./$')

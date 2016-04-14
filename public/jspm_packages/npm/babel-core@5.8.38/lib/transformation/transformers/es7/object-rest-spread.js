@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 // https://github.com/sebmarkbage/ecmascript-rest-spread
 
 "use strict";

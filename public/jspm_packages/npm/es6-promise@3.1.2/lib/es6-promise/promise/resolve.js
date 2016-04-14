@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 import {
   noop,
   resolve as _resolve

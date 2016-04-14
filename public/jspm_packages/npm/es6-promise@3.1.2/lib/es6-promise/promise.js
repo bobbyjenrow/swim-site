@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 import {
   isFunction
 } from './utils';

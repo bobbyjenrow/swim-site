@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Prints TaggedTemplateExpression, prints tag and quasi.
  */

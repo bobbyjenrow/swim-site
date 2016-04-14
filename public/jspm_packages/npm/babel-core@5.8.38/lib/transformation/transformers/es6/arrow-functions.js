@@ -1,5 +1,3 @@
-/* */ 
-"format cjs";
 /**
  * Turn arrow functions into normal functions.
  *

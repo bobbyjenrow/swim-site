@@ -1,0 +1,13 @@
+{
+  "map": {
+    "crypto": "@empty"
+  },
+  "meta": {
+    "src/*.js": {
+      "deps": [
+        "reflect-metadata",
+        "zone.js"
+      ]
+    }
+  }
+}
