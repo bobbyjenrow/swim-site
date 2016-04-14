@@ -7,6 +7,7 @@ var userControllers = require("../controllers/user.js");
 //router.use('/', express.static("/public"));
 
 // users
+router.get('/users/:id', userControllers.getUser);
 router.get('/users', userControllers.getAllUsers);
 router.post('/users', userControllers.createUserAccount);
 router.patch('/users/:id', userControllers.patchUpdate);
