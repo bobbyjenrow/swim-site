@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
 <script>
@@ -19,17 +20,25 @@
     <li><strong>GET /users</strong>: Get json of all users</li>
     <li><strong>POST /users</strong>: Submit a  raw JSON body containing a valid body (username, password, email, role fields  must be filled out) <br/>
       <p>
-        IE: {
+        IE: {<br/>
     "username" : "eddier", <strong> >> lowercase, numbers accepted, minlength 5 max 16</strong> <br/>
     "password" : "EddieReeseIsDaBest", <strong> > >> lower + upper case, numbers, min 6, max  16</strong>  <br/>
     "email"    : "eddiereese@gmail.com", <strong> >> lowercase, numbers accepted, email format </strong> <br/>
     "role"     : "coach"  <strong> >> lowercase = "coach" or "athlete" </strong><br/>
+  }<br/>
       </p>
     </li>
-    <li><strong> JSON PATCH /users/:id </strong>: URL must be /users/+ the full user id. Submit a  raw JSON body containing operation type, path, and the value. Works for add and replace.<br/>
+    <li><strong> JSON PATCH /users/:id </strong>: URL must be /users/+ the full user id. Submit a  raw JSON body containing an  array with objects containing operation type, path, and the value. Works for add and replace.<br/>
       <p>
-         IE: {"op": "replace", "path": "/bio/name" , "value": "examplevalue"}
+         IE: [
+       </br/>
+         {"op": "replace", "path": "/bio/name" , "value": "examplevalue"},<br />
+         {"op": "add", "path": "/bio/interests" , "value": ["coaching"]},<br />
+         {"op": "replace", "path": "/bio/location" , "value": "Pittsburgh, PA"} <br />
+         ]<br />
       </p>
+    <li><strong> GET /users/:id </strong>: URL must be /users/+ the full user id. Returns a single user.<br/>
+
   </ul>
 
 </body>
