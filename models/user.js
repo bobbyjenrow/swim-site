@@ -61,7 +61,7 @@ var userSchema = new Schema({
     activeUntil: {type: String}
   },
   coachData: {
-    about: {type: String, required: true, default: "About me"},
+    about: {type: String, required: false, default: "About me"},
     certifications: {type: [certification], default: []},
     backgroundCheck: {
       type: {type: String, default:  "none"},
@@ -77,6 +77,7 @@ var userSchema = new Schema({
   }
 });
 
+// Password hash on password creation and update
 userSchema.pre('save', function (next) {
     var user = this;
     if (this.isModified('password') || this.isNew) {
@@ -84,7 +85,7 @@ userSchema.pre('save', function (next) {
             if (err) {
                 return next(err);
             }
-            bcrypt.hash(user.password, salt, function (err, hash) {
+            bcrypt.hash(user.password, salt, null, function (err, hash) {
                 if (err) {
                     return next(err);
                 }

@@ -17,7 +17,7 @@ router.patch('/users/:id', userControllers.patchUpdate);
 router.delete('/users/:id', userControllers.deleteUser);
 
 // Use basic auth, return JWT
-router.get('/auth', auth.jwt);
+router.get('/auth', auth.authenticate, auth.jwt);
 
 // Export the router
 module.exports = router;
