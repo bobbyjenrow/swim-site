@@ -15,8 +15,8 @@ module.exports.auth = passport.use('login', new BasicStrategy(
       if(err){return done(err);}
       if(!user){ return done(null, false, {message: 'User not found'});}
       user.comparePassword(password, function(err, isMatch){
-        console.log(password + isMatch + err)
-        if(err && !isMatch){
+        console.log(password + "/" +isMatch + "/" + err)
+        if(!err && isMatch){
           return done(null, user);
         } else{
           return done(null, false);
@@ -30,7 +30,7 @@ module.exports.jwt = function(req, res){
   var token = jwt.sign(req.user._id, config.secret, {
     expiresIn: 10080
   });
-  res.json({success: true, token: ('JWT' +  token), message: req.user});
+  res.json({success: true, token: ('JWT' +  token)});
 }
 
 module.exports.authenticate = passport.authenticate('login', {session: false});
