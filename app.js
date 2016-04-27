@@ -8,6 +8,8 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var filter = require('content-filter');
 var ejs = require('ejs');
+var passport =  require('passport');
+
 
 var app = express();
 mongoose.connect("mongodb://admin:BigoleBigole@ds019970.mlab.com:19970/swim-guru");
@@ -19,12 +21,13 @@ app.set('view engine', 'ejs');
 
 
 app.use(logger('dev'));
+app.use(passport.initialize());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(filter());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+require('./controllers/jwt-passport')(passport);
 app.use('/', routes);
 
 // catch 404 and forward to error handler
