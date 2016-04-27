@@ -45,6 +45,16 @@
           <li><strong> GET /users/:id </strong>: URL must be /users/+ the full user id. Returns a single user.<br/>
         </ul>
 
+        <label><h3><a href="https://swim-site.herokuapp.com/auth">/auth endpoints</a></h3></label>
+        <ul>
+          <li><strong>GET <a href="https://swim-site.herokuapp.com/auth">/auth</a></strong>: Send  a  get request including Base64 encoded email:password, and recieve a json web token. <br />ie:<br />
+          email: bobby@gmail.com <br/>
+          password: bobby1 <br />
+          "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NzFmYjk3MmE2YWJiYzRkNTllMWIzNWUiLCJpYXQiOjE0NjE3Njg1NDcsImV4cCI6MTQ2MTc4NjU0N30.__-7QCToZCGwwRJYm65xfJ9JUEk-Cp8EygRcr6IcFIE"</li>
+          <li><strong>GET <a href="https://swim-site.herokuapp.com/test">/test</a></strong>: Submit a get request including an authorization header containing a JWT <br /> ie: <br />"Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NzFmYjk3MmE2YWJiYzRkNTllMWIzNWUiLCJpYXQiOjE0NjE3Njg1NDcsImV4cCI6MTQ2MTc4NjU0N30.__-7QCToZCGwwRJYm65xfJ9JUEk-Cp8EygRcr6IcFIE"  <br/>
+          </li>
+        </ul>
+
         <h2>Angular Component</h2>
         <app>... this is the live section of the app ... not yet working</app>
 
