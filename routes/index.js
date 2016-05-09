@@ -6,6 +6,7 @@ var userControllers = require("../controllers/user.js");
 var register = require('../controllers/register.js');
 var auth = require('../controllers/auth.js');
 var checkJwt = require('../controllers/jwt-passport.js');
+var wktControllers = require('../controllers/workout.js');
 require('../controllers/auth').auth(passport);
 require('../controllers/jwt-passport')(passport);
 
@@ -25,6 +26,12 @@ router.get('/auth', passport.authenticate('login', {session: false}), auth.jwt);
 router.get('/test',  passport.authenticate('jwt', { session: false }), function(req, res) {
   res.send('It worked! Your logged-in user id is: ' + req.user._id + '.');
 });
+
+router.get('/workouts', wktControllers.getWorkouts);
+router.get('/workouts/:id', wktControllers.getWorkout);
+router.post('/workouts', wktControllers.createWorkout);
+router.patch('/workouts/:id', wktControllers.updateWorkout);
+router.delete('/workouts/:id', wktControllers.removeWorkout);
 
 
 // Export the router
