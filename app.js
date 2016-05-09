@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var filter = require('content-filter');
-var ejs = require('ejs');
+var pug = require('pug');
 var passport =  require('passport');
 
 
@@ -15,10 +15,7 @@ var app = express();
 mongoose.connect("mongodb://admin:BigoleBigole@ds019970.mlab.com:19970/swim-guru");
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-
-
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(passport.initialize());

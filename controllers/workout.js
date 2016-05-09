@@ -28,10 +28,15 @@ var  update = function(req, res){
   Workout.findById(req.params.id, function(err, doc){
     err ? res.send(err) :
     doc.patch(patches, function(err){
-      if(err){ res.send(err);}
+      if(err){
+        res.send(err);
+      }
       doc.save(function(err){
-        if(err) {res.send(err);}
-        else {res.send("Update(s) successful" + user);}
+        if(err) {
+          console.log(err);
+          res.send(err);
+        }
+        else {res.send("Update(s) successful" + doc);}
       });
     });
   });

@@ -29,6 +29,8 @@
     "zone.js": "^0.6.10"
   },
   "devDependencies": {
+    "debug": "^2.2.0",
+    "express-debug": "^1.1.1",
     "jspm": "^0.16.33",
     "mpath": "^0.2.1",
     "nodemon": "^1.9.1"
